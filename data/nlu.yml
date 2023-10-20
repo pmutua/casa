@@ -39,53 +39,18 @@ nlu:
     - that sounds good
     - correct
 
-- intent: deny
+- intent: search_property
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Find me properties in [location](location) with [bedrooms](bedrooms) and [bathrooms](bathrooms) bathrooms
+    - Show me houses in [location](location) under [price](price)
+    - What are the listings in [location](location)?
 
-- intent: mood_great
+- intent: schedule_viewing
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Can I Schedule a viewing for [property](property) on date [date](date)?
+    - When can I see [property](property)?
 
-- intent: mood_unhappy
+- intent: get_recommendations
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Recommend me some properties [min_bedrooms](min_bedrooms) [max_price](max_price)
+    - Show me similar listings

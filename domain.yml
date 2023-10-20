@@ -1,34 +1,92 @@
-version: "3.1"
+version: "2.0"
 
 intents:
+  - search_property
+  - get_recommendations
+  - schedule_viewing
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+
+slots:
+  location:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: location
+
+  bedrooms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bedrooms
+
+  bathrooms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bathrooms
+
+  price:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: price
+
+  viewing_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: viewing_date
+
+  min_bedrooms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: min_bedrooms
+
+  max_price:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: max_price
+
+
+entities:
+  - location
+  - bedrooms
+  - bathrooms
+  - price
+  - viewing_date
+  - min_bedrooms
+  - max_price
+
+actions:
+  - action_search_property
+  - action_schedule_viewing
+  - action_get_recommendations
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+    - text: "Hello! How can I assist you today?"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Goodbye! If you have any more questions in the future, feel free to ask."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  utter_search_properties:
+    - text: "Here are some properties that match your criteria: \n {property_listings}"
+
+  utter_recommendations:
+    - text: "Here are some property recommendations based on your preferences:\n{recommendations}"
+
+  utter_scheduled_viewing:
+    - text: "You have successfully scheduled a viewing for {location} on {viewing_date}."
+
+  utter_no_properties_found:
+    - text: "I couldn't find any properties matching your criteria."
+
+  utter_default:
+    - text: "I'm not sure I understand. Could you please rephrase that?"
+
+fallback_responses:
+  - utter_default

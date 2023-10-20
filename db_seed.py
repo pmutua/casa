@@ -20,6 +20,16 @@ try:
                        price REAL
                    )
     """)
+    
+    
+    # Create a viewings table if it doesn't exist
+    cursor.execute("""
+                   CREATE TABLE IF NOT EXISTS viewings (
+                       id INTEGER PRIMARY KEY,
+                       location TEXT,
+                       viewing_date TEXT
+                   )
+    """)
 
     # Insert the property data into the database
     for prop in property_data:
