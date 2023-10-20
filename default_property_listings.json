@@ -1,0 +1,122 @@
+[
+    {
+        "location": "New York City",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 500000
+    },
+    {
+        "location": "Los Angeles",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 600000
+    },
+    {
+        "location": "Chicago",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "price": 700000
+    },
+    {
+        "location": "Miami",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 450000
+    },
+    {
+        "location": "San Francisco",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 800000
+    },
+    {
+        "location": "Boston",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "price": 900000
+    },
+    {
+        "location": "Seattle",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 750000
+    },
+    {
+        "location": "Austin",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 550000
+    },
+    {
+        "location": "Denver",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 780000
+    },
+    {
+        "location": "Philadelphia",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 480000
+    },
+    {
+        "location": "Atlanta",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 670000
+    },
+    {
+        "location": "Dallas",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "price": 820000
+    },
+    {
+        "location": "Houston",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 560000
+    },
+    {
+        "location": "San Diego",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 690000
+    },
+    {
+        "location": "Portland",
+        "bedrooms": 5,
+        "bathrooms": 3,
+        "price": 920000
+    },
+    {
+        "location": "Phoenix",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 720000
+    },
+    {
+        "location": "Minneapolis",
+        "bedrooms": 2,
+        "bathrooms": 1,
+        "price": 570000
+    },
+    {
+        "location": "Las Vegas",
+        "bedrooms": 4,
+        "bathrooms": 2,
+        "price": 790000
+    },
+    {
+        "location": "Orlando",
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "price": 460000
+    },
+    {
+        "location": "San Antonio",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "price": 680000
+    }
+]
