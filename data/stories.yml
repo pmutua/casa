@@ -1,30 +1,33 @@
 version: "3.1"
 
 stories:
+  - story: User greets and asks for property recommendations
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: get_recommendations
+      - action: action_get_recommendations
+      - action: utter_recommendations
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: User schedules a property viewing
+    steps:
+      - intent: schedule_viewing
+      - action: action_schedule_viewing
+      - action: utter_scheduled_viewing
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: User searches for properties with specific criteria
+    steps:
+      - intent: search_property
+      - action: action_search_property
+      - action: utter_search_properties
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: User asks for recommendations with no matching properties
+    steps:
+      - intent: get_recommendations
+      - action: action_get_recommendations
+      - action: utter_no_properties_found
+
+  - story: User says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
